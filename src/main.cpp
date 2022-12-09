@@ -1,6 +1,8 @@
-#include "PrintHello.hpp"
+#include <iostream>
+#include "firma.hpp"
 
 int main()
 {
-    printHello();
+    Firma MlekPol;
+    
 }
