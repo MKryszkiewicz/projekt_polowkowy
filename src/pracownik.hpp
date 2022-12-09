@@ -1,6 +1,9 @@
 #ifndef pracownik_hpp
 #define pracownik_hpp
 
+#include <iostream>
+#include "RandomNameGenerator.hpp"
+
 using namespace std;
 
 class Pracownik

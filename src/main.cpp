@@ -1,8 +1,8 @@
 #include <iostream>
-#include "firma.hpp"
+#include "gra.hpp"
 
 int main()
 {
-    Firma MlekPol;
-
+    Gra MlekPol;
+    MlekPol.rozgrywka();
 }

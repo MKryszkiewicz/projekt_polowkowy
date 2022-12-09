@@ -16,22 +16,27 @@ class Firma
     public:
     Firma()
     {
-        stan_konta = 100;    
-    }
-    Firma (double s_k)
-    {
-        stan_konta = s_k;
+        stan_konta = 1000.0;    
+        zatrudnij_pracownika(1);
+        zatrudnij_pracownika(2);
+        zatrudnij_pracownika(3);
+        zatrudnij_pracownika(4);
     }
 
     //Gettery
-    double get_wartosc_spolki()
+    double get_wartosc_spolki(int czas) // to chyba nie do konca jest getter ale niech juz tutaj bedzie
     {
-        return wartosc_spolki;
+        double suma;
+        for (int i=czas;(czas+i)<(czas+N);i++)
+        {
+            suma = historia_przychodow[czas-i];
+        }
+        return suma;
     }
-    double get_stan_konta()
-    {
-        return stan_konta;
-    }
+    // double get_stan_konta()
+    // {
+    //     return stan_konta;
+    // }
     double get_l_pracownikow()
     {
         return l_pracownikow;
@@ -39,10 +44,6 @@ class Firma
     double get_l_kredytow()
     {
         return l_kredytow;
-    }
-    int get_miesiac()
-    {
-        return miesiac;
     }
     //Settery
 
@@ -110,6 +111,14 @@ class Firma
         }
         l_pracownikow++;  
     }
+
+    void zakoncz_ture(int l_tur)
+    {
+        dochod();
+        historia_przychodow[l_tur]=sprzedaz();
+    }
+
+
     double sprzedaz()
     {
         double cena = l_inz*CI;
@@ -148,6 +157,13 @@ class Firma
         stan_konta += sprzedaz() - pensje() - raty();
     }
 
+    bool get_stan()
+    {
+        if ((stan_konta)<0.0)
+            return false;
+        else
+            return true;
+    }
     private:
     const double CI = 1;
     const double CMag = 1;
@@ -160,16 +176,19 @@ class Firma
     const double Rob_salary = 10;
 
     double wartosc_spolki;
-    double stan_konta;
+    double stan_konta=0.0;
     double max_kwota_kredytu;
-    int l_kredytow;
-    int l_pracownikow;
-    int l_inz;
-    int l_mag;
-    int l_mkt;
-    int l_rob;
-    int miesiac = 0;
-
+    int l_kredytow=0;
+    int l_pracownikow=0;
+    int l_inz=0;
+    int l_mag=0;
+    int l_mkt=0;
+    int l_rob=0;
+    double historia_przychodow[999];
+    bool stan;
+    int N=5; //miesiace brane pod uwage przy wyliczaniu wartosci spolki
+    int x=10;
+    int M=10;
     Pracownik* lista_pracownikow[999];
     Kredyt *lista_kredytow[999];
 
