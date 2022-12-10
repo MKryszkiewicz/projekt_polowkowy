@@ -18,9 +18,9 @@ class Mag : public Pracownik
     {
         cout<<"Jestem "<<name;//<<". Moje wynagrodzenie wynosi: "<<salary<<" złotych.";
         if(wozek)
-            cout<<"Jestem Magazynierem i umiem jezdzic wozkiem"<<endl;
+            cout<<"Jestem Magazynierem i umiem jezdzic wozkiem."<<endl;
         else
-            cout<<"Jestem Magazynierem i nie umiem jezdzic wozkiem"<<endl;
+            cout<<"Jestem Magazynierem i nie umiem jezdzic wozkiem."<<endl;
     }
     private:
     bool wozek;

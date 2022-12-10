@@ -17,7 +17,7 @@ class Mkt : public Pracownik
     void drukuj()
     {
         cout<<"Jestem "<<name;//<<". Moje wynagrodzenie wynosi: "<<salary<<" złotych.";
-        cout<<"Jestem Marketingowcem i mam "<<followers<<" obserwujacych"<<endl;
+        cout<<"Jestem Marketingowcem i mam "<<followers<<" obserwujacych."<<endl;
     }
     private:
     int followers;

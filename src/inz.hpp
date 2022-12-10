@@ -16,8 +16,8 @@ class Inz : public Pracownik
     }
     void drukuj()
     {
-        cout<<"Jestem "<<name;//<<". Moje wynagrodzenie wynosi: "<<salary<<" złotych.";
-        cout<<"Jestem inzynierem po wydziale "<<faculty<<endl;
+        cout<<"Jestem "<<name<<". ";//<<". Moje wynagrodzenie wynosi: "<<salary<<" złotych.";
+        cout<<"Jestem inzynierem po wydziale "<<faculty<<"."<<endl;
     }
     private:
     string faculty;

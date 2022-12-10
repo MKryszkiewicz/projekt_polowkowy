@@ -10,7 +10,7 @@ class Kredyt
     {
         kwota_kredytu = kwota;
         czas_splacania = czas;
-        rata = kwota/czas+(0.05*czas_splacania*kwota); //odsetki wynosza 5% kwoty za kazdy miesiac i sa stale 
+        rata = kwota/czas+(0.05*czas*kwota); //odsetki wynosza 5% kwoty za kazdy miesiac i sa stale 
     }
     double get_rata()
     {

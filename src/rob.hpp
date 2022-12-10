@@ -17,7 +17,7 @@ class Rob : public Pracownik
     void drukuj()
     {
         cout<<"Jestem "<<name;//<<". Moje wynagrodzenie wynosi: "<<salary<<" złotych.";
-        cout<<"Jestem Robotnikiem i mam rozmiar buta:"<<but<<endl;
+        cout<<"Jestem Robotnikiem i mam rozmiar buta: "<<but<<"."<<endl;
     }
     private:
     double but;
