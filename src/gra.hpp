@@ -33,10 +33,9 @@ class Gra
         {
             int input;
             tura = 1;
-            cout<<"Rozpoczyna sie "<<(miesiac+1)<<"gry."<<endl;
+            cout<<"Rozpoczyna sie "<<(miesiac+1)<<" miesiac gry."<<endl;
             cout<<"Twoj stan konta to: "<<f->get_stan_konta()<<endl;
             cout<<"Wartosc Twojej firmy to: "<<f->get_wartosc_spolki(miesiac-1)<<endl;
-            cout<<"Twoje zadluzenie wynosi: "<<f->raty()<<endl;
             while(tura)
             {
                 cout<<endl<<"Wpisz cyfre odpowiadajaca akcji aby ja wykonac"<<endl;
