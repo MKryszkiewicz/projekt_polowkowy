@@ -16,5 +16,6 @@ class Pracownik
     }
     public:
     virtual void drukuj()=0;
+    virtual ~Pracownik() = default;
 };
 #endif
