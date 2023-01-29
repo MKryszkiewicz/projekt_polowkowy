@@ -6,6 +6,7 @@
 class Kredyt
 {
     public:
+    ~Kredyt();
     Kredyt (double kwota, int czas)
     {
         kwota_kredytu = kwota;
