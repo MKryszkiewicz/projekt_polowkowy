@@ -14,6 +14,10 @@
 class Firma
 {
     public:
+    ~Firma()
+    {
+        \\Wydaje mi sie ze nie musze juz tutaj nic niszczyc, bo lista pracownikow i lista kredytow uzyja destruktorów ze swoich klas.
+    }
     Firma()
     {
         stan_konta = 1000.0;
